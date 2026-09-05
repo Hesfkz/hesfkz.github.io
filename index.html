@@ -3,913 +3,117 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-
-    <title>Anna Cheung | Personal Website</title>
-
-    <meta name="description"
-          content="The personal website of Anna Cheung, featuring perspectives on growth, investment, travel, philanthropy, and meaningful impact.">
-
-    <meta name="keywords"
-          content="Anna Cheung, investment, travel, philanthropy, personal growth">
-
-    <meta name="author" content="Anna Cheung">
+    <title>WiMailer - Certificate Generator & Bulk Mailer</title>
+    <meta name="description" content="WiMailer is a free browser-based tool that creates personalized certificates from templates and Excel data, then sends them via SMTP email. Perfect for schools, organizations, and event managers.">
+    <meta name="keywords" content="certificate generator, bulk email, SMTP mailer, Excel to certificate, personalized certificates, free certificate tool, WiMailer">
+    <meta name="author" content="Devjit Panja">
     <meta name="robots" content="index, follow">
-
-    <link rel="canonical"
-          href="https://annacheung1976.github.io/">
-
-    <!-- Open Graph -->
-    <meta property="og:title"
-          content="Anna Cheung | Personal Website">
-
-    <meta property="og:description"
-          content="Exploring growth, investment, travel, philanthropy, and ideas that create meaningful and lasting impact.">
-
+    <meta property="og:title" content="WiMailer - Certificate Generator & Bulk Mailer">
+    <meta property="og:description" content="Create personalized certificates from a template and Excel spreadsheet, then send them via SMTP email directly from your browser.">
     <meta property="og:type" content="website">
-
-    <meta property="og:url"
-          content="https://annacheung1976.github.io/">
-
-    <meta property="og:site_name"
-          content="Anna Cheung">
-
-    <!-- Twitter -->
-    <meta name="twitter:card" content="summary">
-
-    <meta name="twitter:title"
-          content="Anna Cheung | Personal Website">
-
-    <meta name="twitter:description"
-          content="Exploring growth, investment, travel, philanthropy, and meaningful impact.">
-
-    <!-- Structured Data -->
-    <script type="application/ld+json">
-    {
-      "@context": "https://schema.org",
-      "@type": "Person",
-      "@id": "https://annacheung1976.github.io/#person",
-      "name": "Anna Cheung",
-      "url": "https://annacheung1976.github.io/",
-      "description": "Anna Cheung's personal website featuring perspectives on growth, investment, travel, philanthropy, and meaningful impact."
-    }
-    </script>
-
-    <style>
-
-        * {
-            box-sizing: border-box;
-            margin: 0;
-            padding: 0;
-        }
-
-        html {
-            scroll-behavior: smooth;
-        }
-
-        body {
-            font-family: Georgia, "Times New Roman", serif;
-            background: #f5f2ec;
-            color: #2b2926;
-            line-height: 1.8;
-        }
-
-
-        /* HEADER */
-
-        header {
-            background: #242321;
-            color: #ffffff;
-            position: sticky;
-            top: 0;
-            z-index: 1000;
-            border-bottom: 1px solid rgba(255,255,255,0.08);
-        }
-
-        .nav-container {
-            max-width: 1250px;
-            margin: auto;
-            padding: 18px 30px;
-            display: flex;
-            align-items: center;
-            justify-content: space-between;
-        }
-
-        .logo a {
-            color: #ffffff;
-            text-decoration: none;
-            font-size: 22px;
-            letter-spacing: 1px;
-        }
-
-        nav {
-            display: flex;
-            align-items: center;
-            gap: 24px;
-        }
-
-        nav a {
-            color: #e8e4dd;
-            text-decoration: none;
-            font-family: Arial, sans-serif;
-            font-size: 13px;
-            letter-spacing: 0.4px;
-            transition: opacity 0.2s ease;
-            white-space: nowrap;
-        }
-
-        nav a:hover {
-            opacity: 0.65;
-        }
-
-
-        /* HERO */
-
-        .hero {
-            min-height: 500px;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            text-align: center;
-            padding: 90px 25px;
-            background: #f3efe9;
-        }
-
-        .hero-inner {
-            max-width: 850px;
-        }
-
-        .hero-label {
-            font-family: Arial, sans-serif;
-            text-transform: uppercase;
-            letter-spacing: 4px;
-            font-size: 11px;
-            color: #8b8173;
-            margin-bottom: 18px;
-        }
-
-        .hero h1 {
-            font-size: 68px;
-            font-weight: normal;
-            line-height: 1.15;
-            margin-bottom: 22px;
-            color: #292723;
-        }
-
-        .hero p {
-            max-width: 720px;
-            margin: auto;
-            color: #655f57;
-            font-size: 18px;
-        }
-
-
-        /* GENERAL */
-
-        section {
-            padding: 90px 25px;
-        }
-
-        .container {
-            max-width: 1050px;
-            margin: auto;
-        }
-
-        .section-header {
-            text-align: center;
-            margin-bottom: 50px;
-        }
-
-        .section-label {
-            font-family: Arial, sans-serif;
-            font-size: 11px;
-            text-transform: uppercase;
-            letter-spacing: 3px;
-            color: #978b7a;
-            margin-bottom: 12px;
-        }
-
-        .section-header h2 {
-            font-size: 40px;
-            font-weight: normal;
-            color: #292723;
-            margin-bottom: 14px;
-        }
-
-        .section-header p {
-            max-width: 700px;
-            margin: auto;
-            color: #777067;
-        }
-
-
-        /* ABOUT */
-
-        .about {
-            background: #ffffff;
-        }
-
-        .about-content {
-            max-width: 780px;
-            margin: auto;
-            text-align: center;
-        }
-
-        .about-content p {
-            color: #615b53;
-            font-size: 18px;
-            margin-bottom: 22px;
-        }
-
-
-        /* BUTTONS */
-
-        .learn-more {
-            display: inline-block;
-            margin-top: 18px;
-            padding-bottom: 3px;
-            border-bottom: 1px solid #8d8172;
-            color: #5c554d;
-            text-decoration: none;
-            font-family: Arial, sans-serif;
-            font-size: 12px;
-            letter-spacing: 1px;
-            text-transform: uppercase;
-            transition: opacity 0.2s ease;
-        }
-
-        .learn-more:hover {
-            opacity: 0.6;
-        }
-
-        .button {
-            display: inline-block;
-            margin-top: 15px;
-            padding: 14px 28px;
-            border: 1px solid #292825;
-            color: #292825;
-            text-decoration: none;
-            font-family: Arial, sans-serif;
-            font-size: 12px;
-            letter-spacing: 1px;
-            transition: all 0.2s ease;
-        }
-
-        .button:hover {
-            background: #292825;
-            color: #ffffff;
-        }
-
-
-        /* JOURNEY */
-
-        .journey {
-            background: #292825;
-            color: #ffffff;
-        }
-
-        .journey .section-label {
-            color: #b5aa9b;
-        }
-
-        .journey .section-header h2 {
-            color: #ffffff;
-        }
-
-        .journey .section-header p {
-            color: #c3bcb2;
-        }
-
-        .journey-content {
-            max-width: 780px;
-            margin: auto;
-            text-align: center;
-        }
-
-        .journey-content p {
-            color: #c3bcb2;
-            font-size: 18px;
-            margin-bottom: 22px;
-        }
-
-
-        /* INTERESTS */
-
-        .interests {
-            background: #f5f2ec;
-        }
-
-        .cards {
-            display: grid;
-            grid-template-columns: repeat(2, 1fr);
-            gap: 25px;
-        }
-
-        .card {
-            background: #ffffff;
-            border: 1px solid #e4ddd2;
-            padding: 38px;
-            transition: transform 0.2s ease,
-                        box-shadow 0.2s ease;
-        }
-
-        .card:hover {
-            transform: translateY(-3px);
-            box-shadow: 0 12px 30px rgba(0,0,0,0.05);
-        }
-
-        .card h3 {
-            font-size: 23px;
-            font-weight: normal;
-            margin-bottom: 12px;
-        }
-
-        .card p {
-            color: #746d64;
-            font-size: 15px;
-        }
-
-
-        /* PROFESSIONAL */
-
-        .professional {
-            background: #ffffff;
-        }
-
-        .professional-grid {
-            display: grid;
-            grid-template-columns: repeat(2, 1fr);
-            gap: 25px;
-        }
-
-        .professional-item {
-            border-top: 1px solid #d9d1c5;
-            padding: 30px 10px;
-        }
-
-        .professional-item h3 {
-            font-size: 22px;
-            font-weight: normal;
-            margin-bottom: 10px;
-        }
-
-        .professional-item p {
-            color: #746d64;
-            font-size: 15px;
-        }
-
-
-        /* PHILANTHROPY */
-
-        .philanthropy {
-            background: #eee9e1;
-        }
-
-        .philanthropy-content {
-            max-width: 780px;
-            margin: auto;
-            text-align: center;
-        }
-
-        .philanthropy-content p {
-            color: #615b53;
-            font-size: 18px;
-            margin-bottom: 22px;
-        }
-
-
-        /* CONTACT */
-
-        .contact {
-            background: #292825;
-            color: #ffffff;
-            text-align: center;
-        }
-
-        .contact .section-label {
-            color: #b5aa9b;
-        }
-
-        .contact h2 {
-            color: #ffffff;
-            font-size: 40px;
-            font-weight: normal;
-            margin-bottom: 18px;
-        }
-
-        .contact p {
-            max-width: 650px;
-            margin: 0 auto 25px;
-            color: #c3bcb2;
-        }
-
-        .contact .button {
-            color: #ffffff;
-            border-color: #ffffff;
-        }
-
-        .contact .button:hover {
-            background: #ffffff;
-            color: #292825;
-        }
-
-
-        /* FOOTER */
-
-        footer {
-            background: #242321;
-            color: #aaa39a;
-            text-align: center;
-            padding: 30px 20px;
-            font-family: Arial, sans-serif;
-            font-size: 12px;
-        }
-
-
-        /* MOBILE */
-
-        @media (max-width: 950px) {
-
-            .nav-container {
-                flex-direction: column;
-                gap: 14px;
-            }
-
-            nav {
-                flex-wrap: wrap;
-                justify-content: center;
-                gap: 12px 18px;
-            }
-
-            .hero {
-                min-height: 430px;
-            }
-
-            .hero h1 {
-                font-size: 48px;
-            }
-
-            .cards,
-            .professional-grid {
-                grid-template-columns: 1fr;
-            }
-
-            section {
-                padding: 65px 22px;
-            }
-
-            .section-header h2,
-            .contact h2 {
-                font-size: 34px;
-            }
-        }
-
-        @media (max-width: 550px) {
-
-            .nav-container {
-                padding: 16px 18px;
-            }
-
-            nav {
-                gap: 9px 14px;
-            }
-
-            nav a {
-                font-size: 11px;
-            }
-
-            .hero h1 {
-                font-size: 42px;
-            }
-
-            .hero p {
-                font-size: 16px;
-            }
-
-            .card {
-                padding: 28px;
-            }
-        }
-
-    </style>
+    <meta property="og:url" content="https://github.com/Hesfkz/WiMailer">
+    <meta property="og:image" content="https://github.com/Hesfkz/WiMailer/raw/main/screenshot.png">
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="WiMailer - Certificate Generator & Bulk Mailer">
+    <meta name="twitter:description" content="Create and email certificates automatically. Free, browser-based, no installation required.">
 </head>
+<body style="margin:0; padding:0; background-color:#f4f6f9; font-family:'Segoe UI', Roboto, Helvetica, Arial, sans-serif; color:#2d3748; line-height:1.7;">
 
+    <div style="max-width:900px; margin:0 auto; padding:40px 20px;">
 
-<body>
-
-
-<!-- HEADER -->
-
-<header>
-
-    <div class="nav-container">
-
-        <div class="logo">
-            <a href="index.html">Anna Cheung</a>
+        <!-- Header with badge -->
+        <div style="text-align:center; background:linear-gradient(135deg, #667eea 0%, #764ba2 100%); border-radius:20px; padding:60px 30px; box-shadow:0 15px 35px rgba(102,126,234,0.3); margin-bottom:50px;">
+            <img src="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='80' height='80' viewBox='0 0 24 24' fill='white'%3E%3Cpath d='M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm-2 15l-5-5 1.41-1.41L10 14.17l7.59-7.59L19 8l-9 9z'/%3E%3C/svg%3E" alt="WiMailer Logo" style="width:80px; height:80px; margin-bottom:20px;">
+            <h1 style="margin:0 0 10px 0; color:white; font-size:2.8em; font-weight:700; letter-spacing:-1px;">🎓 WiMailer</h1>
+            <h2 style="margin:0; color:rgba(255,255,255,0.9); font-weight:400; font-size:1.3em;">Create, Customize, Send Certificates Effortlessly</h2>
+            <a href="https://github.com/Hesfkz/WiMailer" style="display:inline-block; background:#f6ad55; color:#2d3748; font-weight:700; font-size:1.1em; padding:18px 45px; border-radius:50px; text-decoration:none; margin-top:35px; box-shadow:0 5px 15px rgba(0,0,0,0.2); transition:transform 0.3s; transform:scale(1);">📥 Visit This Link to Download</a>
         </div>
 
-        <nav>
-            <a href="index.html">Home</a>
-            <a href="about.html">About</a>
-            <a href="investment.html">Investment</a>
-            <a href="travel.html">Travel</a>
-            <a href="personal-growth.html">Personal Growth</a>
-            <a href="philanthropy.html">Philanthropy</a>
-            <a href="#contact">Contact</a>
-        </nav>
+        <!-- Introduction -->
+        <div style="background:white; border-radius:16px; padding:40px; box-shadow:0 4px 20px rgba(0,0,0,0.08); margin-bottom:30px;">
+            <h2 style="color:#4a5568; font-size:1.8em; margin-top:0; border-bottom:3px solid #667eea; padding-bottom:10px;">✨ What is WiMailer?</h2>
+            <p style="font-size:1.1em;">WiMailer is a simple, powerful tool that runs entirely in your browser. It lets you create professional-looking certificates for any number of people using just two things: a picture (your certificate design) and an Excel file (your participants' details). Then, with a single click, you can email each person their personalized certificate as a high-quality image attachment.</p>
+            <p>Whether you're organizing a workshop, a course, a competition, or a training program, WiMailer saves you hours of manual work. No design skills, no coding knowledge, and no complicated software installation is required – just use your web browser.</p>
+        </div>
+
+        <!-- Features -->
+        <div style="background:white; border-radius:16px; padding:40px; box-shadow:0 4px 20px rgba(0,0,0,0.08); margin-bottom:30px;">
+            <h2 style="color:#4a5568; font-size:1.8em; margin-top:0; border-bottom:3px solid #667eea; padding-bottom:10px;">🛠️ Features That Make Your Life Easier</h2>
+            <div style="display:flex; flex-wrap:wrap; gap:20px; margin-top:25px;">
+                <div style="flex:1; min-width:280px; background:#f7fafc; border-radius:12px; padding:25px;">
+                    <h3 style="color:#667eea; margin-top:0; font-size:1.3em;">🖼️ Drag-and-Drop Certificate Canvas</h3>
+                    <p>Upload any PNG, JPG, or WebP image to use as your certificate background. Then simply drag and drop text fields anywhere on the image – just like arranging stickers on a photo.</p>
+                </div>
+                <div style="flex:1; min-width:280px; background:#f7fafc; border-radius:12px; padding:25px;">
+                    <h3 style="color:#667eea; margin-top:0; font-size:1.3em;">📊 Excel / CSV Import</h3>
+                    <p>Use your existing participant list from Excel or CSV. Every column in your spreadsheet automatically becomes a draggable text field (like "Name," "Course," "Date"). Supports .xlsx, .xls, and .csv files.</p>
+                </div>
+                <div style="flex:1; min-width:280px; background:#f7fafc; border-radius:12px; padding:25px;">
+                    <h3 style="color:#667eea; margin-top:0; font-size:1.3em;">🎨 Rich Typography Options</h3>
+                    <p>Choose from 20+ different fonts from handwritten to formal serif. Control size, color, bold, italic, text alignment, and even add a professional drop shadow to make your certificates stand out.</p>
+                </div>
+                <div style="flex:1; min-width:280px; background:#f7fafc; border-radius:12px; padding:25px;">
+                    <h3 style="color:#667eea; margin-top:0; font-size:1.3em;">👁️ Per-Row Adjustment</h3>
+                    <p>Click on any row in your data table to preview how that specific recipient's certificate will look. Fine-tune the font or position just for that person without affecting the others – perfect for fixing long names.</p>
+                </div>
+                <div style="flex:1; min-width:280px; background:#f7fafc; border-radius:12px; padding:25px;">
+                    <h3 style="color:#667eea; margin-top:0; font-size:1.3em;">📦 Bulk Download as ZIP</h3>
+                    <p>Generate all certificates at once and download them in a single ZIP file. A live progress bar shows you exactly how much is done – even for hundreds of participants.</p>
+                </div>
+                <div style="flex:1; min-width:280px; background:#f7fafc; border-radius:12px; padding:25px;">
+                    <h3 style="color:#667eea; margin-top:0; font-size:1.3em;">📧 SMTP Email Delivery</h3>
+                    <p>Send each certificate directly as a PNG attachment to its recipient's email address using your own SMTP server. Everything stays private and secure – you are in full control.</p>
+                </div>
+            </div>
+        </div>
+
+        <!-- How It Works -->
+        <div style="background:white; border-radius:16px; padding:40px; box-shadow:0 4px 20px rgba(0,0,0,0.08); margin-bottom:30px;">
+            <h2 style="color:#4a5568; font-size:1.8em; margin-top:0; border-bottom:3px solid #667eea; padding-bottom:10px;">🎯 How It Works – Three Simple Steps</h2>
+            <ol style="font-size:1.1em;">
+                <li style="margin-bottom:20px;"><strong>Upload Your Certificate Design</strong> – This is just a regular picture of your certificate template without any names or details on it. Ideally, leave blank space in the middle for names.</li>
+                <li style="margin-bottom:20px;"><strong>Upload Your Participant List</strong> – This is an Excel or CSV file that has one column for each piece of information you want to appear on the certificate. For example: <em>Name</em> in column A, <em>Course</em> in column B, and <em>Email</em> in column C.</li>
+                <li style="margin-bottom:20px;"><strong>Position, Preview, and Generate</strong> – Drag each column onto your certificate image to define where it appears. Check your work with the preview. Then click "Generate All" to create every certificate in seconds. You can download them or email them instantly.</li>
+            </ol>
+        </div>
+
+        <!-- Download Section -->
+        <div style="background:linear-gradient(135deg, #f093fb 0%, #f5576c 100%); border-radius:16px; padding:50px; box-shadow:0 8px 25px rgba(240,147,251,0.3); margin-bottom:30px; text-align:center;">
+            <h2 style="color:white; font-size:2em; margin-top:0; font-weight:700;">🚀 Get Started with WiMailer Now</h2>
+            <p style="color:white; font-size:1.2em; margin-bottom:35px;">Jump right in – no coding required, free to use, works on any computer with a browser.</p>
+            <a href="https://github.com/Hesfkz/WiMailer" style="display:inline-block; background:#ffffff; color:#f5576c; font-weight:700; font-size:1.2em; padding:16px 50px; border-radius:50px; text-decoration:none; box-shadow:0 5px 20px rgba(0,0,0,0.15);">🔗 Visit This Link to Download</a>
+            <p style="color:rgba(255,255,255,0.9); margin-top:20px;">Visiting the link gives you access to all the files and instructions you need.</p>
+        </div>
+
+        <!-- Technical Info & Requirements -->
+        <div style="background:white; border-radius:16px; padding:40px; box-shadow:0 4px 20px rgba(0,0,0,0.08); margin-bottom:30px;">
+            <h2 style="color:#4a5568; font-size:1.8em; margin-top:0; border-bottom:3px solid #667eea; padding-bottom:10px;">💻 Technical Made Simple</h2>
+            <h3 style="color:#667eea;">What do I need?</h3>
+            <ul>
+                <li>A computer (Windows, Mac, or Linux) with an internet connection.</li>
+                <li>A modern web browser like Chrome, Edge, Firefox, or Safari.</li>
+                <li>Your certificate template image (PNG, JPG, or WebP).</li>
+                <li>An Excel (.xlsx, .xls) or CSV file with your participant data.</li>
+            </ul>
+            <h3 style="color:#667eea;">Is my data safe?</h3>
+            <p>Yes! WiMailer processes everything locally in your browser. Your participant data never gets uploaded to any server, unless you specifically choose to send emails through your own SMTP connection.</p>
+            <h3 style="color:#667eea;">Where can I get support?</h3>
+            <p>For help, support, and detailed documentation, go to the GitHub page using the download button above. The repository includes guides and you can also report issues.</p>
+        </div>
+
+        <!-- About -->
+        <div style="background:white; border-radius:16px; padding:30px; box-shadow:0 4px 20px rgba(0,0,0,0.08); text-align:center;">
+            <h2 style="color:#4a5568; font-size:1.3em; margin-top:0;">👨‍💻 Built by Devjit Panja</h2>
+            <p style="font-size:1em;">WiMailer was created with care to simplify certificate management for organizers everywhere.</p>
+            <a href="https://www.linkedin.com/in/devjitpanja/" style="color:#667eea; text-decoration:underline; font-weight:500;">Connect on LinkedIn</a>
+        </div>
+
+        <!-- Footer -->
+        <div style="text-align:center; color:#8a9db0; font-size:0.9em; margin-top:30px; padding-bottom:20px;">
+            <p>© 2025 WiMailer. All rights reserved. Free for personal and educational use.</p>
+        </div>
 
     </div>
-
-</header>
-
-
-<main>
-
-
-    <!-- HERO -->
-
-    <section class="hero">
-
-        <div class="hero-inner">
-
-            <div class="hero-label">
-                Personal Website
-            </div>
-
-            <h1>Anna Cheung</h1>
-
-            <p>
-                Exploring growth, investment, travel,
-                philanthropy, and the ideas that create
-                meaningful and lasting impact.
-            </p>
-
-        </div>
-
-    </section>
-
-
-    <!-- ABOUT -->
-
-    <section class="about" id="about">
-
-        <div class="container">
-
-            <div class="section-header">
-
-                <div class="section-label">
-                    About
-                </div>
-
-                <h2>About Anna Cheung</h2>
-
-            </div>
-
-            <div class="about-content">
-
-                <p>
-                    I believe that a meaningful life is shaped
-                    by curiosity, continuous learning,
-                    thoughtful decisions, and the willingness
-                    to understand the world from different perspectives.
-                </p>
-
-                <p>
-                    My interests include investment,
-                    travel, philanthropy, and personal growth.
-                    Each represents a different way of learning,
-                    connecting, and creating long-term value.
-                </p>
-
-                <a class="button" href="about.html">
-                    Learn More About Anna
-                </a>
-
-            </div>
-
-        </div>
-
-    </section>
-
-
-    <!-- JOURNEY -->
-
-    <section class="journey" id="journey">
-
-        <div class="container">
-
-            <div class="section-header">
-
-                <div class="section-label">
-                    My Journey
-                </div>
-
-                <h2>A Continuing Journey</h2>
-
-                <p>
-                    Learning from experience,
-                    adapting to change,
-                    and continuing to move forward.
-                </p>
-
-            </div>
-
-            <div class="journey-content">
-
-                <p>
-                    Life is rarely a straight path.
-                    Every experience can offer a new perspective,
-                    a new lesson, or a new opportunity to grow.
-                </p>
-
-                <p>
-                    I value the process of learning over time,
-                    remaining curious, and approaching
-                    each new chapter with an open mind.
-                </p>
-
-            </div>
-
-        </div>
-
-    </section>
-
-
-    <!-- INTERESTS -->
-
-    <section class="interests" id="interests">
-
-        <div class="container">
-
-            <div class="section-header">
-
-                <div class="section-label">
-                    Interests
-                </div>
-
-                <h2>My Interests</h2>
-
-                <p>
-                    Areas that continue to inspire
-                    curiosity, learning, and perspective.
-                </p>
-
-            </div>
-
-
-            <div class="cards">
-
-
-                <!-- INVESTMENT -->
-
-                <div class="card">
-
-                    <h3>Investment</h3>
-
-                    <p>
-                        Exploring markets, long-term value,
-                        economic trends, and the principles
-                        behind thoughtful capital allocation.
-                    </p>
-
-                    <a class="learn-more" href="investment.html">
-                        Explore Investment
-                    </a>
-
-                </div>
-
-
-                <!-- TRAVEL -->
-
-                <div class="card">
-
-                    <h3>Travel</h3>
-
-                    <p>
-                        Discovering new places, cultures,
-                        perspectives, and experiences that
-                        broaden the way we understand the world.
-                    </p>
-
-                    <a class="learn-more" href="travel.html">
-                        Explore Travel
-                    </a>
-
-                </div>
-
-
-                <!-- PHILANTHROPY -->
-
-                <div class="card">
-
-                    <h3>Philanthropy</h3>
-
-                    <p>
-                        Thinking about meaningful ways
-                        to support opportunity, community,
-                        education, and long-term positive impact.
-                    </p>
-
-                    <a class="learn-more" href="philanthropy.html">
-                        Explore Philanthropy
-                    </a>
-
-                </div>
-
-
-                <!-- PERSONAL GROWTH -->
-
-                <div class="card">
-
-                    <h3>Personal Growth</h3>
-
-                    <p>
-                        Continuous learning, self-reflection,
-                        and the pursuit of a thoughtful,
-                        balanced, and purposeful life.
-                    </p>
-
-                    <a class="learn-more" href="personal-growth.html">
-                        Explore Personal Growth
-                    </a>
-
-                </div>
-
-
-            </div>
-
-        </div>
-
-    </section>
-
-
-    <!-- PROFESSIONAL FOCUS -->
-
-    <section class="professional" id="professional">
-
-        <div class="container">
-
-            <div class="section-header">
-
-                <div class="section-label">
-                    Perspective
-                </div>
-
-                <h2>Professional Focus</h2>
-
-                <p>
-                    A thoughtful approach to markets,
-                    research, decision-making,
-                    and long-term value.
-                </p>
-
-            </div>
-
-
-            <div class="professional-grid">
-
-                <div class="professional-item">
-
-                    <h3>Markets & Investment</h3>
-
-                    <p>
-                        Understanding financial markets,
-                        economic conditions, and the forces
-                        that influence value over time.
-                    </p>
-
-                </div>
-
-
-                <div class="professional-item">
-
-                    <h3>Long-Term Thinking</h3>
-
-                    <p>
-                        Looking beyond short-term noise
-                        and considering the broader forces
-                        that shape opportunity and risk.
-                    </p>
-
-                </div>
-
-
-                <div class="professional-item">
-
-                    <h3>Research & Perspective</h3>
-
-                    <p>
-                        Learning continuously,
-                        examining different viewpoints,
-                        and approaching complex decisions
-                        with curiosity and discipline.
-                    </p>
-
-                </div>
-
-
-                <div class="professional-item">
-
-                    <h3>Responsible Growth</h3>
-
-                    <p>
-                        Considering not only opportunity,
-                        but also sustainability,
-                        responsibility, and long-term impact.
-                    </p>
-
-                </div>
-
-            </div>
-
-        </div>
-
-    </section>
-
-
-    <!-- PHILANTHROPY -->
-
-    <section class="philanthropy" id="philanthropy">
-
-        <div class="container">
-
-            <div class="section-header">
-
-                <div class="section-label">
-                    Giving With Purpose
-                </div>
-
-                <h2>Philanthropy</h2>
-
-            </div>
-
-            <div class="philanthropy-content">
-
-                <p>
-                    Philanthropy can be more than giving.
-                    It can be a thoughtful way to create opportunity,
-                    strengthen communities, and support ideas
-                    that may continue creating value for years to come.
-                </p>
-
-                <p>
-                    I am interested in approaches that emphasize
-                    meaningful impact, thoughtful participation,
-                    and a long-term perspective.
-                </p>
-
-                <a class="button" href="philanthropy.html">
-                    Explore Philanthropy
-                </a>
-
-            </div>
-
-        </div>
-
-    </section>
-
-
-    <!-- CONTACT -->
-
-    <section class="contact" id="contact">
-
-        <div class="container">
-
-            <div class="section-label">
-                Contact
-            </div>
-
-            <h2>Let's Connect</h2>
-
-            <p>
-                Thank you for visiting my personal website.
-            </p>
-
-            <!--
-            IMPORTANT:
-            Replace the placeholder telephone number below
-            with the public contact number you actually want
-            visitors to use.
-
-            Example:
-            href="tel:+11234567890"
-            -->
-
-            <a class="button" href="tel:+11234567890">
-                Contact
-            </a>
-
-        </div>
-
-    </section>
-
-
-</main>
-
-
-<footer>
-    © 2026 Anna Cheung. All rights reserved.
-</footer>
-
 
 </body>
 </html>
